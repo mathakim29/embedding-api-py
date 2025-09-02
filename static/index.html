@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>CanvasDatagrid – SelectedCells to JSON</title>
+
+        <script src="https://unpkg.com/canvas-datagrid/dist/canvas-datagrid.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"
+        ></script>
+
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/gridstack@latest/dist/gridstack.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/npm/gridstack@latest/dist/gridstack.all.js"></script>
+    </head>
+    <body>
+        <div id="gridContainer"></div>
+        <button id="exportRaw">Export JSON</button>
+        <button id="swap">Swapped</button>
+        <button id="hi">Swappedss</button>
+        <button id="copyBtn">Copy Selection</button>
+
+        <input type="text" id="search" placeholder="Type something..." />
+        <div id="suggestions"></div>
+
+        <div
+            id="codeContainer"
+            style="
+                resize: both;
+                overflow: auto;
+                width: 600px;
+                height: 300px;
+                border: 1px solid #ccc;
+                position: relative;
+            "
+        >
+            <pre
+                style="margin: 0; height: 100%"
+            ><code id="highlightedCode" class="json" style="display: block; height: 100%;"></code></pre>
+        </div>
+
+        <div id="chart"></div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
